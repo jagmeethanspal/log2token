@@ -12,11 +12,12 @@
 
 import argparse
 import re
+import json
 import pprint
 
 def parse_tokens(filename, tokens):
 
-    print(f"Parsing Tokens: {tokens} from File: {filename}")
+    #print(f"Parsing Tokens: {tokens} from File: {filename}")
 
     # Data store
     data = {}
@@ -70,7 +71,8 @@ def parse_tokens(filename, tokens):
 
 def display(data, format):
     if format == "json":
-        print(data)
+        json_data = json.dumps(data)
+        print(json_data)
     elif format == "table":
         for key in data:
             header = " Token: " + key + " "
