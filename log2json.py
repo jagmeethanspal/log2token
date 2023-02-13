@@ -99,8 +99,8 @@ def main():
     parser = argparse.ArgumentParser()
 
     parser.add_argument("-l", "--logfile", help = "Path of the Log File", required=True)
-    parser.add_argument("-t", "--tokens", help = "List of search tokens")
-    parser.add_argument("-f", "--format", help = "json OR table OR pretty", default="pretty")
+    parser.add_argument("-t", "--tokens", help = "List of search token(s)")
+    parser.add_argument("-f", "--format", help = "json OR table (default) OR pretty", default="table")
 
     args = parser.parse_args()
 
