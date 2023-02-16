@@ -92,15 +92,20 @@ def display(data, format):
                 i = i + 1
     elif format == "pretty":
         pprint.pprint(data)
+    elif format == "none":
+        return
+    elif format == "tokens":
+        for key in data:
+            print(key, end=" ")
     else:
         print(f"Unsupported Format: {format}")
 
 def main():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("-l", "--logfile", help = "Path of the Log File", required=True)
-    parser.add_argument("-t", "--tokens", help = "List of search token(s)")
-    parser.add_argument("-f", "--format", help = "json OR table (default) OR pretty", default="table")
+    parser.add_argument("-f", "--filename", help = "Path of the Log File", required=True)
+    parser.add_argument("-t", "--tokens", help = "List of search token(s) or expression(s)")
+    parser.add_argument("-o", "--output", help = "json OR table (default) OR pretty OR none OR tokens", default="table")
 
     args = parser.parse_args()
 
