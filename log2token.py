@@ -109,8 +109,8 @@ def main():
 
     args = parser.parse_args()
 
-    if args.logfile:
-        filename = args.logfile
+    if args.filename:
+        filename = args.filename
     else:
         print("Missing name of Logfile")
         exit()
@@ -123,6 +123,6 @@ def main():
         print("Missing some search Tokens")
         exit() 
 
-    display(data, args.format)
+    display(data, args.output)
 
 main()
