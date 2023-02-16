@@ -6,7 +6,7 @@
 #   token,token2|token3=NUM or -NUM
 #   where token: "string (eg. state or m1234)" or "expression (eg. m\d{4})" 
 # Support Output Formats:
-#   JSON, Pretty Print, Table
+#   JSON, Pretty Print, Table, None, Tokens
 #
 # Author: Jagmeet Singh Hanspal
 

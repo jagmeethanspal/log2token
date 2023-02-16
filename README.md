@@ -30,4 +30,4 @@ date                 time                 value
 ```
 
 # Support Output Formats:
-JSON, Pretty Print, Table
+JSON, Pretty Print, Table, None, Tokens
